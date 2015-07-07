@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="testsite.url">http://dev-smartling.pantheon.io/en/user/login</entry>
+	<entry key="smartlingConfigUrl">http://dev-smartling.pantheon.io/en/admin/config/regional/smartling</entry>
+	<entry key="implicit-timeout">30</entry>
+	<entry key="username">admin</entry>
+	<entry key="password">sm_test</entry>
+</properties>
