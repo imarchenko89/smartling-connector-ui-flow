@@ -21,6 +21,7 @@ public class TestBase {
 	protected AdminPage adminPage;
 	protected String username;
 	protected String password;
+	protected String adminUrl;
 
 	@BeforeClass
 	public void setUp() throws Exception {
@@ -28,7 +29,8 @@ public class TestBase {
 		timeout = XmlPropertyLoader.loadProperty("implicit-timeout");
 		username = XmlPropertyLoader.loadProperty("username");
 		password = XmlPropertyLoader.loadProperty("password");
-		WebDriver webDriver = new FirefoxDriver();
+		adminUrl = XmlPropertyLoader.loadProperty("adminUrl");
+		webDriver = new FirefoxDriver();
 		webDriver.manage().timeouts()
 				.implicitlyWait(Integer.valueOf(timeout), TimeUnit.SECONDS);
 		webDriver.get(testUrl);
