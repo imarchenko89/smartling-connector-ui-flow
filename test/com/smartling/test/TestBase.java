@@ -25,6 +25,9 @@ public class TestBase {
 
 	@BeforeClass
 	public void setUp() throws Exception {
+		System.setProperty("logback.configurationFile",
+				"src/com/smartling/utility/logbackConfig.xml");
+
 		testUrl = XmlPropertyLoader.loadProperty("testsite.url");
 		timeout = XmlPropertyLoader.loadProperty("implicit-timeout");
 		username = XmlPropertyLoader.loadProperty("username");
