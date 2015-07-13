@@ -8,7 +8,7 @@ public class ConnectorUIFlowTest extends TestBase {
 	@Test(priority = 1)
 	public void logIn() {
 		adminPage = loginPage.logInToUserPage(username, password);
-		Assert.assertTrue(adminPage.isLoggedOK(),
+		Assert.assertTrue(adminPage.isLoggedOK(adminUrl),
 				"Hello Admin message isn't displayed");
 	}
 	
