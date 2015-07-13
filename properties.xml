@@ -3,6 +3,7 @@
 <properties>
 	<entry key="testsite.url">http://dev-smartling.pantheon.io/en/user/login</entry>
 	<entry key="smartlingConfigUrl">http://dev-smartling.pantheon.io/en/admin/config/regional/smartling</entry>
+	<entry key="adminUrl">http://dev-smartling.pantheon.io/en/users/admin</entry>
 	<entry key="implicit-timeout">30</entry>
 	<entry key="username">admin</entry>
 	<entry key="password">sm_test</entry>
