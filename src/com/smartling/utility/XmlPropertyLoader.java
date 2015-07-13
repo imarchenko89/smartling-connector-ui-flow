@@ -5,10 +5,14 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.InvalidPropertiesFormatException;
 import java.util.Properties;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 // XmlPropertyLoader for loading properties from xml property file.
 
 public class XmlPropertyLoader {
+
+	static final Logger logger = LoggerFactory.getLogger(XmlPropertyLoader.class);
 
 	public static String loadProperty(String propertyName) {
 		Properties props = new Properties();
@@ -17,11 +21,11 @@ public class XmlPropertyLoader {
 					"properties.xml");
 			props.loadFromXML(fis);
 		} catch (FileNotFoundException e) {
-			e.printStackTrace();
+			logger.error(e.getMessage(), e);
 		} catch (InvalidPropertiesFormatException e) {
-			e.printStackTrace();
+			logger.error(e.getMessage(), e);
 		} catch (IOException e) {
-			e.printStackTrace();
+			logger.error(e.getMessage(), e);
 		}
 
 		return props.getProperty(propertyName);
