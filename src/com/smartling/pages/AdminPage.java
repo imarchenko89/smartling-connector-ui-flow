@@ -16,11 +16,13 @@ public class AdminPage extends Page {
 	WebElement helloAdminMessage;
 
 	public SmartlingSettings goToSmartlingSettings(String settingsUrl) {
+		
 		webDriver.get(settingsUrl);
 		return PageFactory.initElements(webDriver, SmartlingSettings.class);	
 	}
 	
-	public boolean isLoggedOK() {
-		return isElementPresent(helloAdminMessage);	
+	public boolean isLoggedInOK(String adminUrl) {
+		boolean isAdminUrl = webDriver.getCurrentUrl().equals(adminUrl);
+		return (isElementPresent(helloAdminMessage) & isAdminUrl);
 	}
 }
